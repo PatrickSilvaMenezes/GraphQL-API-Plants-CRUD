@@ -10,4 +10,7 @@ export class Plant {
 
   @Field()
   lastTimeWatered: Date;
+
+  @Field()
+  cursor?: string;
 }

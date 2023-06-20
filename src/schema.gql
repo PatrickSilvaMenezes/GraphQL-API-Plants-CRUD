@@ -20,11 +20,12 @@ type Mutation {
 
 type Plant {
   color: String!
+  cursor: String!
   lastTimeWatered: DateTime!
   name: String!
 }
 
 type Query {
   plantByLastTimeWatered(data: DateTime!): [Plant!]
-  plants: [Plant!]
+  plants(after: String, first: Float, sort: String): [Plant!]
 }
